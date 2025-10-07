@@ -1,0 +1,41 @@
+body{
+    padding: 0;
+    margin-top: 0;
+    margin-left: 0;
+    background-color: #FFF9FB;
+}
+header {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  background-color: #4B88A2;
+}
+
+nav {
+  margin-bottom: 20px; 
+}
+
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  background-color: #4B88A2;
+}
+
+h2{
+    color: #252627;
+}
+
+p{
+    color: #252627
+}
