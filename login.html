@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registre a CKPoint</title>
+  <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+
+  <h2>Registre a CKPoint</h2>
+
+  <form id="registerForm">
+    <p>
+      <label for="inpnom">Nom d'usuari: <label style="color:red">*</label></label>
+    </p>
+    <p>
+      <input type="text" id="inpnom" placeholder="Ej: Mario1234" required>
+    </p>
+
+    <p>
+      <label for="inpcorr">Correu Electrònic: <label style="color:red">*</label></label>
+    </p>
+    <p>
+      <input type="email" id="inpcorr" placeholder="exemple@exemple.com" required>
+    </p>
+
+    <p>
+      <label for="inppas">Contrasenya: <label style="color:red">*</label></label>
+    </p>
+    <p>
+      <input type="password" id="inppas" placeholder="Contrasenya..." required>
+    </p>
+
+    <p>
+      <input type="submit" value="Registrar-me">
+    </p>
+  </form>
+
+  <p id="message"></p>
+
+  <a href="./inicisesio.html"><button>Iniciar Sessió</button></a>
+
+    <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+  import { 
+    getAuth, 
+    createUserWithEmailAndPassword, 
+    sendEmailVerification,
+    signOut 
+  } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+  import { 
+    getFirestore, 
+    doc, 
+    setDoc, 
+    getDocs, 
+    collection, 
+    query, 
+    where 
+  } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+  // --- CONFIGURACIÓN DE FIREBASE ---
+  const firebaseConfig = {
+    apiKey: "AIzaSyBwHJi626w0zC1lSc4u1DwxgdcP9iqpNmU",
+    authDomain: "projecte-smx.firebaseapp.com",
+    projectId: "projecte-smx",
+    storageBucket: "projecte-smx.firebasestorage.app",
+    messagingSenderId: "525444233430",
+    appId: "1:525444233430:web:ffd0c29181828940607177",
+    measurementId: "G-ZMVTHMK0ZL"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+
+  const form = document.getElementById('registerForm');
+  const message = document.getElementById('message');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const username = document.getElementById('inpnom').value.trim();
+    const email = document.getElementById('inpcorr').value.trim();
+    const password = document.getElementById('inppas').value.trim();
+
+try {
+  const cred = await createUserWithEmailAndPassword(auth, email, password);
+
+  // Aquí aseguramos que el usuario está autenticado
+  const user = cred.user;
+
+  // Envía el correo de verificación
+  await sendEmailVerification(user);
+
+  alert("T'hem enviat un correu de verificació. Comprova la teva safata d'entrada!");
+  await signOut(auth);
+
+  // Redirige o limpia el formulario
+  window.location.href = "login.html";
+} catch (error) {
+  console.error("Error en el registre:", error);
+  alert("Error en el registre: " + error.message);
+} finally {
+  document.getElementById("status").innerText = "";
+}
+
+  });
+</script>
+
+  
+</body>
+</html>

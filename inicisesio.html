@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicia Sessió</title>
+  <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+
+  <h2>Inicia Sessió a CKPoint</h2>
+
+  <form id="loginForm">
+    <p>
+      <label for="inpcorr">Correu Electronic: <label style="color:red">*</label></label>
+    </p>
+    <p>
+      <input type="email" id="inpcorr" placeholder="exemple@exemple.com" required>
+    </p>
+
+    <p>
+      <label for="inppas">Contrasenya: <label style="color:red">*</label></label>
+    </p>
+    <p>
+      <input type="password" id="inppas" placeholder="Contrasenya..." required>
+    </p>
+
+    <p>
+      <input type="submit" id="inpenv" value="Iniciar sessió">
+    </p>
+  </form>
+
+  <p id="message"></p>
+
+  <a href="./login.html"><button>Registrar-se</button></a>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBwHJi626w0zC1lSc4u1DwxgdcP9iqpNmU",
+      authDomain: "projecte-smx.firebaseapp.com",
+      projectId: "projecte-smx",
+      storageBucket: "projecte-smx.firebasestorage.app",
+      messagingSenderId: "525444233430",
+      appId: "1:525444233430:web:ffd0c29181828940607177",
+      measurementId: "G-ZMVTHMK0ZL"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    const form = document.getElementById("loginForm");
+    const message = document.getElementById("message");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const email = document.getElementById("inpcorr").value.trim();
+      const password = document.getElementById("inppas").value.trim();
+
+      try {
+        const userCredential = await signInWithEmailAndPassword(auth, email, password);
+        const user = userCredential.user;
+
+        if (user.emailVerified) {
+          message.textContent = "Sessió iniciada correctament 🎉";
+          message.style.color = "green";
+          // Redirige a la página principal
+          setTimeout(() => {
+            window.location.href = "index.html";
+          }, 1000);
+        } else {
+          message.textContent = "Has de verificar el teu correu abans d'iniciar sessió 📩";
+          message.style.color = "red";
+        }
+      } catch (error) {
+        message.textContent = "Error: " + error.message;
+        message.style.color = "red";
+      }
+    });
+  </script>
+</body>
+</html>
