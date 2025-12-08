@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 
+
 <!--
 Fondo principal: #FFF9FB
 
@@ -33,6 +34,7 @@ Fondo secundario / bordes / elementos UI: #D3D4D9
         </nav>
     </header>
 
+    <main>
     <a href="./empreses/nintendo/nintendo.html" class="card">
   <div class="card-content">
     <img src="./assets/img/nintendo.png" alt="Imagen nintendo" class="card-img">
@@ -40,6 +42,65 @@ Fondo secundario / bordes / elementos UI: #D3D4D9
     <p class="card-description">Accede a los juegos de nintendo</p>
   </div>
 </a>
+
+ <a href="./empreses/playstation/playst.html" class="card">
+  <div class="card-content">
+    <img src="./assets/img/PS.png" alt="Imagen nintendo" class="card-img">
+    <h3 class="card-title">Play Station</h3>
+    <p class="card-description">Accede a los juegos de Play</p>
+  </div>
+</a>
+ <a href="./empreses/xbox/xbox.html" class="card">
+  <div class="card-content">
+    <img src="./assets/img/XBX.png" alt="Imagen nintendo" class="card-img">
+    <h3 class="card-title">Xbox</h3>
+    <p class="card-description">Accede a los juegos de Xbox</p>
+  </div>
+</a>
+ <a href="./empreses/PC/Pc.html" class="card">
+  <div class="card-content">
+    <img src="./assets/img/PC.png" alt="Imagen nintendo" class="card-img">
+    <h3 class="card-title">Pc</h3>
+    <p class="card-description">Accede a los juegos de pc</p>
+  </div>
+</a>
+</main>
+
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+        <style>
+            :root {
+                --chat--color-primary: #ff3846;
+                --chat--color-secondary: #3e4451;
+                /* Opcional: si quieres que “blanco” sea una variable reutilizable */
+                --chat--subtitle--color-white: #ffffff;
+            }
+            
+            .subtitle {
+                color: #ffffff !important;
+            }
+        </style>
+            <script type="module">
+            import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+            createChat({
+                webhookUrl: 'https://n8n-act.onrender.com/webhook/f173e208-b01f-4dff-bf38-57bd5f368d07/chat',
+                initialMessages: [
+                'Somos el Asistente CKPoint',
+                '¿En qué puedo ayudarte hoy?'
+                ],
+                i18n: {
+                en: {
+                    title: 'Asistente CKPoint',
+                    subtitle: 'Estamos aquí para ayudarte siempre' ,
+                    getStarted: 'Iniciar conversación',
+                    inputPlaceholder: 'Escribe tu mensaje...',
+                }
+                }
+            });
+    </script>
+
+
+
     <footer>
         <p>&copy; Projecte desenvolupat per Brais Manent IES Joan Ramis i Ramis</p>
     </footer>
