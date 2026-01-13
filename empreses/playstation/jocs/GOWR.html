@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>God of War Ragnarök</title>
+    <link rel="stylesheet" href="./jocsplay.css">
+</head>
+<body>
+    <header>
+        <img src="../../../assets/img/logo.png" alt="logo web" height="200">
+        
+        <nav id="menhead">
+            <a href="../../../index.html">Inici</a>
+            <a href="./views/about.html">Sobre el projecte</a>
+        </nav>
+    </header>
+
+    <h2 id="baile">Tràiler del videojoc</h2>
+
+    <div class="pare"></div>
+    <div class="gif-container">
+        </div>
+
+    <div class="vid">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/hfJ4Km46A-0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <h2 id="nobaile">Origen del videojoc</h2>
+    <p>God of War Ragnarök, desenvolupat per Santa Monica Studio, és la seqüela del joc de 2018. Kratos i Atreus han de viatjar a cadascun dels nou regnes a la recerca de respostes mentre les forces d'Asgard es preparen per a la batalla profetitzada que acabarà amb el món. El joc aprofundeix en la relació pare-fill i perfecciona el combat visceral característic de la saga.</p>
+    
+    <section class="comments-section">
+        <h2>Comunitat / Comentarios</h2>
+        
+        <div class="comment-form">
+            <textarea id="commentInput" placeholder="Què en penses d'aquest joc?"></textarea>
+            <button id="sendBtn">Publicar</button>
+        </div>
+
+        <div id="commentsList" class="comments-list">
+            </div>
+    </section>
+
+    <script>
+        const GAME_ID = "GOWR"; // En Halo pon "HaloInf", en LoL pon "LoL", etc.
+    </script>
+
+    <script type="module" src="./comments.js"></script>
+    
+    <footer>
+        <p>&copy; Projecte desenvolupat per Brais Manent IES Joan Ramis i Ramis</p>
+    </footer>
+
+    <script src="./jocsplay.js"></script>
+    
+</body>
+</html>
