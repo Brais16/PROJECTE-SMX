@@ -12,7 +12,7 @@
         
         <nav id="menhead">
             <a href="../../../index.html">Inici</a>
-            <a href="./views/about.html">Sobre el projecte</a>
+            <a href="../../../views/about.html">Sobre el projecte</a>
         </nav>
     </header>
 
@@ -28,7 +28,23 @@
 
     <h2 id="nobaile">Origen del videojoc</h2>
     <p>Gran Turismo 7 recupera les millors característiques de la història de la saga. Tant si t'agrada competir, col·leccionar cotxes, dissenyar lliurees o fer fotos, troba el teu camí amb una col·lecció increïble de modes de joc, inclosos els favorits dels fans com la Campanya GT, Arcade i l'Escola de Conducció.</p>
-    
+    <section class="comments-section">
+        <h2>Comunitat / Comentarios</h2>
+        
+        <div class="comment-form">
+            <textarea id="commentInput" placeholder="Què en penses d'aquest joc?"></textarea>
+            <button id="sendBtn">Publicar</button>
+        </div>
+
+        <div id="commentsList" class="comments-list">
+            </div>
+    </section>
+
+    <script>
+        const GAME_ID = "GT7"; 
+    </script>
+
+    <script type="module" src="./comments.js"></script>
     <footer>
         <p>&copy; Projecte desenvolupat per Brais Manent IES Joan Ramis i Ramis</p>
     </footer>

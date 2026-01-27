@@ -14,7 +14,7 @@
             <a href="../../../index.html">
                 Inici
             </a>
-            <a href="./views/about.html">
+            <a href="../../../views/about.html">
                 Sobre el projecte
             </a>
         </nav>
@@ -36,6 +36,25 @@
 
     <h2 id="nobaile">Origen del videojoc</h2>
     <p>Super Mario 64, llançat el 1996 per a la Nintendo 64, va suposar el gran salt de Mario dels plataformes en 2D al  món tridimensional. Shigeru Miyamoto, el creador de la saga, va dissenyar un món obert amb càmera lliure i llibertat de moviment, on el jugador podia explorar els nivells gairebé sense restriccions i recollir estrelles en comptes d’arribar simplement al final. Aquest enfocament va revolucionar els jocs de plataformes i va establir les bases dels videojocs en 3D.</p>
+    
+    <section class="comments-section">
+        <h2>Comunitat / Comentarios</h2>
+        
+        <div class="comment-form">
+            <textarea id="commentInput" placeholder="Què en penses d'aquest joc?"></textarea>
+            <button id="sendBtn">Publicar</button>
+        </div>
+
+        <div id="commentsList" class="comments-list">
+            </div>
+    </section>
+
+    <script>
+        const GAME_ID = "SM64"; 
+    </script>
+
+    <script type="module" src="./comments.js"></script>
+    
     <footer>
         <p>&copy; Projecte desenvolupat per Brais Manent IES Joan Ramis i Ramis</p>
     </footer>

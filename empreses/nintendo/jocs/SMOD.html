@@ -14,7 +14,7 @@
             <a href="../../../index.html">
                 Inici
             </a>
-            <a href="./views/about.html">
+            <a href="../../../views/about.html">
                 Sobre el projecte
             </a>
         </nav>
@@ -32,6 +32,25 @@
 
     <h2 id="nobaile">Origen del videojoc</h2>
     <p>Super Mario Odyssey va sorgir com el nou gran projecte de Mario per a Nintendo Switch, desenvolupat per Nintendo EPD. El seu origen parteix de voler recuperar l’essència d’exploració oberta de Super Mario 64 i Sunshine, però amb una llibertat encara més gran. L’equip va crear mons amplis i variats basats en cultures reals i fantàstiques, i va introduir en Mario el poder de capturar enemics i objectes gràcies al seu nou company, Cappy. El joc es va publicar el 2017 com una aventura innovadora i emblemàtica de la consola.</p>
+    
+    <section class="comments-section">
+        <h2>Comunitat / Comentarios</h2>
+        
+        <div class="comment-form">
+            <textarea id="commentInput" placeholder="Què en penses d'aquest joc?"></textarea>
+            <button id="sendBtn">Publicar</button>
+        </div>
+
+        <div id="commentsList" class="comments-list">
+            </div>
+    </section>
+
+    <script>
+        const GAME_ID = "SMOD"; 
+    </script>
+
+    <script type="module" src="./comments.js"></script>
+    
     <footer>
         <p>&copy; Projecte desenvolupat per Brais Manent IES Joan Ramis i Ramis</p>
     </footer>

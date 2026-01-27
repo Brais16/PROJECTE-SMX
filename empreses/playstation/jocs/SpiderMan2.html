@@ -12,7 +12,7 @@
         
         <nav id="menhead">
             <a href="../../../index.html">Inici</a>
-            <a href="./views/about.html">Sobre el projecte</a>
+            <a href="../../../views/about.html">Sobre el projecte</a>
         </nav>
     </header>
 
@@ -29,6 +29,24 @@
     <h2 id="nobaile">Origen del videojoc</h2>
     <p>Els Spider-Man, Peter Parker i Miles Morales, tornen en una nova aventura emocionant de la franquícia de Marvel. Balanceja't, salta i utilitza les noves ales de teranyina per recórrer la Nova York de Marvel, canviant ràpidament entre els dos herois per viure diferents històries i poders èpics mentre lluites contra el malvat Venom.</p>
     
+    <section class="comments-section">
+        <h2>Comunitat / Comentarios</h2>
+        
+        <div class="comment-form">
+            <textarea id="commentInput" placeholder="Què en penses d'aquest joc?"></textarea>
+            <button id="sendBtn">Publicar</button>
+        </div>
+
+        <div id="commentsList" class="comments-list">
+            </div>
+    </section>
+
+    <script>
+        const GAME_ID = "SpiderMan2"; 
+    </script>
+
+    <script type="module" src="./comments.js"></script>
+
     <footer>
         <p>&copy; Projecte desenvolupat per Brais Manent IES Joan Ramis i Ramis</p>
     </footer>

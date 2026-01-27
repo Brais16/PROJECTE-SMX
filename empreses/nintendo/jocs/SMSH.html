@@ -14,7 +14,7 @@
             <a href="../../../index.html">
                 Inici
             </a>
-            <a href="./views/about.html">
+            <a href="../../../views/about.html">
                 Sobre el projecte
             </a>
         </nav>
@@ -33,6 +33,25 @@
 
     <h2 id="nobaile">Origen del videojoc</h2>
     <p>Super Mario Sunshine (2002) va néixer quan Nintendo va voler crear un Mario 3D per a GameCube que fos diferent de Super Mario 64, centrant-se en un món més coherent i en una mecànica nova: l’ús del dispositiu d’aigua FLUDD. Dirigit per Yoshiaki Koizumi i supervisat per Shigeru Miyamoto, el joc va adoptar una ambientació inspirada en illes mediterrànies i va introduir un estil més continuista, amb episodis dins d’escenaris grans i interconnectats. El resultat va ser un Mario més narratiu i experimental, conegut pel seu to lluminós i el seu enfocament en la precisió amb l’aigua.</p>
+    
+    <section class="comments-section">
+        <h2>Comunitat / Comentarios</h2>
+        
+        <div class="comment-form">
+            <textarea id="commentInput" placeholder="Què en penses d'aquest joc?"></textarea>
+            <button id="sendBtn">Publicar</button>
+        </div>
+
+        <div id="commentsList" class="comments-list">
+            </div>
+    </section>
+
+    <script>
+        const GAME_ID = "SMSH"; 
+    </script>
+
+    <script type="module" src="./comments.js"></script>
+    
     <footer>
         <p>&copy; Projecte desenvolupat per Brais Manent IES Joan Ramis i Ramis</p>
     </footer>
