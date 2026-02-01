@@ -16,7 +16,7 @@
         </nav>
     </header>
 
-    <h2 id="baile">Tràiler del videojoc</h2>
+    <h2 >Tràiler del videojoc</h2>
 
     <div class="pare"></div>
     <div class="gif-container">
@@ -26,7 +26,7 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/1tBUsXIkG1A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 
-    <h2 id="nobaile">Origen del videojoc</h2>
+    <h2>Origen del videojoc</h2>
     <p>Gran Turismo 7 recupera les millors característiques de la història de la saga. Tant si t'agrada competir, col·leccionar cotxes, dissenyar lliurees o fer fotos, troba el teu camí amb una col·lecció increïble de modes de joc, inclosos els favorits dels fans com la Campanya GT, Arcade i l'Escola de Conducció.</p>
     <section class="comments-section">
         <h2>Comunitat / Comentarios</h2>
@@ -45,6 +45,38 @@
     </script>
 
     <script type="module" src="./comments.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+        <style>
+            :root {
+                --chat--color-primary: #ff3846;
+                --chat--color-secondary: #3e4451;
+              
+                --chat--subtitle--color-white: #ffffff;
+            }
+            
+            .subtitle {
+                color: #ffffff !important;
+            }
+        </style>
+            <script type="module">
+            import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+            createChat({
+                webhookUrl: 'https://n8n-act.onrender.com/webhook/a696f02e-c659-484b-980c-d82aa0c488c9/chat',
+                initialMessages: [
+                'Somos el Asistente CKPoint',
+                '¿En qué puedo ayudarte hoy?'
+                ],
+                i18n: {
+                en: {
+                    title: 'Asistente CKPoint',
+                    subtitle: 'Estamos aquí para ayudarte siempre' ,
+                    getStarted: 'Iniciar conversación',
+                    inputPlaceholder: 'Escribe tu mensaje...',
+                }
+                }
+            });
+    </script>
     <footer>
         <p>&copy; Projecte desenvolupat per Brais Manent IES Joan Ramis i Ramis</p>
     </footer>

@@ -128,7 +128,7 @@ h2{
   width: 200px;
 }
 
-/* Estilos de la sección de comentarios */
+
 .comments-section {
     max-width: 800px;
     margin: 40px auto;
@@ -171,7 +171,6 @@ h2{
     background-color: #36667a;
 }
 
-/* Estilo de cada comentario individual */
 .comment-card {
     border-bottom: 1px solid #eee;
     padding: 15px 0;

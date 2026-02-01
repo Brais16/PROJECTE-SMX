@@ -33,29 +33,7 @@
 
     <h2 id="nobaile">Origen del videojoc</h2>
     <p>Super Mario Galaxy (2007) va néixer quan Nintendo EAD Tokyo, després de Super Mario Sunshine, volia reinventar Mario en 3D amb una idea completament nova: plataformes basades en la gravetat i petits planetes. Partint d’experiments com Super Mario 128, el director Yoshiaki Koizumi va desenvolupar un joc que aprofités les possibilitats de la Wii i oferís nivells curts, variats i sorprenents, convertint l’aventura en una mena de parc d’atraccions espacial. El resultat va ser un Mario innovador i molt influent, celebrat per la seva creativitat i disseny.</p>
-
-    <h2>Personatges Principals</h2>
     
-  <div class="card-content">
-    <img src="/assets/img/PsM.avif" alt="Imagen super mario galaxy" class="card-img">
-    <h3 class="card-title">Super Mario</h3>
-    <p class="card-description">Qui completa l'aventura</p>
-  </div>
-  <div class="card-content">
-    <img src="/assets/img/RosalinePS.webp" alt="Imagen super mario galaxy" class="card-img" id="rosaline">
-    <h3 class="card-title">Princesa Rosalina</h3>
-    <p class="card-description">Qui comanda a totes les galaxies i ajuda a Super Mario a acbar l'aventura.</p>
-  </div>
-   <div class="card-content">
-    <img src="/assets/img/MLPS.webp" alt="Imagen super mario galaxy" class="card-img">
-    <h3 class="card-title">Mestre Luma</h3>
-    <p class="card-description">Company insperable que viatge sota la gora d'en Mario i li otorga superpoders</p>
-  </div>
-  <div class="card-content">
-    <img src="/assets/img/BWPS.jpeg" alt="Imagen super mario galaxy" class="card-img">
-    <h3 class="card-title">Bowser</h3>
-    <p class="card-description">Enemic principal de la trama, rapta a la princesa Peach i vol tenir una galaxia per ell tot sol</p>
-  </div>
 
     <section class="comments-section">
         <h2>Comunitat / Comentarios</h2>
@@ -74,6 +52,38 @@
     </script>
 
     <script type="module" src="./comments.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+        <style>
+            :root {
+                --chat--color-primary: #ff3846;
+                --chat--color-secondary: #3e4451;
+                --chat--subtitle--color-white: #ffffff;
+            }
+            
+            .subtitle {
+                color: #ffffff !important;
+            }
+        </style>
+            <script type="module">
+            import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+            createChat({
+                webhookUrl: 'https://n8n-act.onrender.com/webhook/a696f02e-c659-484b-980c-d82aa0c488c9/chat',
+                initialMessages: [
+                'Somos el Asistente CKPoint',
+                '¿En qué puedo ayudarte hoy?'
+                ],
+                i18n: {
+                en: {
+                    title: 'Asistente CKPoint',
+                    subtitle: 'Estamos aquí para ayudarte siempre' ,
+                    getStarted: 'Iniciar conversación',
+                    inputPlaceholder: 'Escribe tu mensaje...',
+                }
+                }
+            });
+    </script>
 
     <footer>
         <p>&copy; Projecte desenvolupat per Brais Manent IES Joan Ramis i Ramis</p>

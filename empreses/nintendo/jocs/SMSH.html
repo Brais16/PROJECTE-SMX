@@ -50,6 +50,39 @@
         const GAME_ID = "SMSH"; 
     </script>
 
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+        <style>
+            :root {
+                --chat--color-primary: #ff3846;
+                --chat--color-secondary: #3e4451;
+                
+                --chat--subtitle--color-white: #ffffff;
+            }
+            
+            .subtitle {
+                color: #ffffff !important;
+            }
+        </style>
+            <script type="module">
+            import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+            createChat({
+                webhookUrl: 'https://n8n-act.onrender.com/webhook/a696f02e-c659-484b-980c-d82aa0c488c9/chat',
+                initialMessages: [
+                'Somos el Asistente CKPoint',
+                '¿En qué puedo ayudarte hoy?'
+                ],
+                i18n: {
+                en: {
+                    title: 'Asistente CKPoint',
+                    subtitle: 'Estamos aquí para ayudarte siempre' ,
+                    getStarted: 'Iniciar conversación',
+                    inputPlaceholder: 'Escribe tu mensaje...',
+                }
+                }
+            });
+    </script>
+
     <script type="module" src="./comments.js"></script>
     
     <footer>
